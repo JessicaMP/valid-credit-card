@@ -1,38 +1,45 @@
-# Tarjeta de crédito válida
+# **TARJETA DE CRÉDITO**
 
-Crea una web que pida, por medio de un `prompt()`, el número de una tarjeta de
-crédito y confirme su validez según el [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn). 
-Lee este blog que explica [cómo funciona el algoritmo de Luhn](http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-para-generar-numeros-de-tarjetas-de-credito.html).
-  
-## Entregables
+## Introducción
+Este programa te ayuda a ver si tu tarjeta de crédito es valida.
 
-Para cada producto debes entregar **un repositorio de GitHub** que
-contenga:
-1. Archivo `README.md` que explique el **pseudocódigo** de tu solución y su
-**diagrama de flujo**
-2. Archivo `app.js` con el **código** de tu solución
-3. Archivo `index.html` vinculado con tu `app.js`
+### Pseudocodigo
 
-## Tips
 
-A continuación un video de Michelle que te lleva a través del algoritmo de
-Luhn y te da tips para completar este proyecto:
+##### Algoritmo Tarjeta_de_credito_valida
 
-[![tips credit card](https://img.youtube.com/vi/f0zL6Ot9y_w/0.jpg)](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
+      Definir array,arr,i,j,duplicate,sum,k,cardNumberReverse Como Entero
+	  Definir cardNumber Como Caracter
+	  Escribir 'Ingrese el número de su tarjeta:'
+	  Leer input
+	  Mientras (cardNumber==' ') Hacer
+		Escribir 'Ingrese el número de su tarjeta sin espacios:'
+		Leer input
+		Para i<-0 Hasta Longitud(array)Hacer
+			Leer cardNumberReverse = arr.reverse(arr.push(parseInt(array[i])))
+		FinPara
+		Para j <-0 Hasta Longitud(cardNumberReverse) Hacer
+			Si  cardNumberReverse[j]%2 === 1
+				Entonces duplicate = cardNumberReverse[j] * 2
+		Asignamos cardNumberReverse[j] += parseInt(duplicate / 10) + duplicate % 10
+		Fin Si Entonces
+		FinPara
+		Para k <-0 Hasta Longitud(cardNumberReverse) Hacer
+		Asignamos sum = cardNumberReverse[k]
+			Si  sum %10 === 0
+				Entonces Mostramos 'Tarjeta valida'
+			Si No
+				Entonces 'Tarjeta Invalida'
+			Fin Si Entonces
+		Fin Para
+	  Fin Algoritmo
 
-## Consideraciones específicas
+##### Diagrama de flujo
+<https://ibb.co/bUu2GG>
 
-1. Tu código debe estar compuesto por 1 función: `isValidCard`
-2. El usuario no debe poder ingresar un campo vacío
+##### Ejemplo:
+<https://ibb.co/cuNHiw>
 
-## Criterios de evaluación
+web site : <file:///C:/Users/yo/Laboratoria/Productos%20Finales/Tarjeta_de%20_credito_valida/index.html>
 
-Se tomarán en cuenta las siguientes consideraciones a la hora de evaluar tu solución:
-
-1. Nombramiento de variables
-2. Indentación
-3. Validación de input: el usuario no debe poder ingresar un campo vacío o de tipo que no corresponda
-4. Estructura de tus archivos
-5. Archivo `README.md` correctamente redactado
-6. Uso de comentarios para hacer tu código más legible
-7. Que el programa cumpla con el propósito requerido
+E- mail : <jessica95.mp@gmail.com>
