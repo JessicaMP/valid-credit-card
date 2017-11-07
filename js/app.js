@@ -28,9 +28,9 @@ function isValidCard() {
   // Creamos una variable de suma
   var sum = 0;
   // Recorremos todos los elementos de la variable de la variable sum
-  for (var k = 0; k < cardNumberReverse.length; k++) {
+  for (var i = 0; i < cardNumberReverse.length; i++) {
     // le agregamos la suma que se realizo
-    sum += cardNumberReverse[k];
+    sum += cardNumberReverse[i];
     // Si la suma tiene un residuo de 10 igual a 0 entonces la tarjeta es valida
     if (sum % 10 === 0) {
       alert('tarjeta valida');
